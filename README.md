@@ -1,25 +1,18 @@
 # Morpheus System 💸
 
-Sistema de Gestão Financeira Inteligente com IA (Gemini API).
+Sistema de Gestão Financeira com IA.
 
-## Como Hospedar no GitHub Pages
+## IMPORTANTE - GitHub Pages
 
-1. Crie um novo repositório no GitHub.
-2. Envie os arquivos extraídos deste ZIP para o repositório.
-3. No GitHub, vá em **Settings > Pages**.
-4. Em **Build and deployment**, selecione a branch `main` e a pasta `/(root)`.
-5. Salve e aguarde o deploy.
+Como o GitHub Pages não suporta nativamente arquivos `.tsx` sem compilação:
 
-## Configuração da API Key
+### Opção A: Usando o Site Diretamente (Fácil)
+Se você estiver enviando os arquivos crus, o navegador pode bloquear a execução. O ideal é usar um servidor que suporte módulos.
 
-Este sistema utiliza a API do Google Gemini. Como o GitHub Pages é estático, a variável `process.env.API_KEY` não estará disponível automaticamente.
-Para funcionar em produção, você deve:
-1. Abrir o arquivo `services/geminiService.ts`.
-2. Substituir `process.env.API_KEY` pela sua chave real (não recomendado para repositórios públicos) OU implementar um campo de input para que o usuário insira sua própria chave.
+### Opção B: Build com Vite (Profissional)
+1. Extraia o ZIP.
+2. No terminal: `npm install && npm run build`.
+3. Envie apenas o conteúdo da pasta `dist` para o seu repositório GitHub.
 
-## Desenvolvimento Local
-
-```bash
-npm install
-npm run dev
-```
+## API KEY
+O sistema solicitará sua chave do Gemini na primeira vez que você tentar usar uma função de IA. Ela ficará salva apenas no seu navegador.

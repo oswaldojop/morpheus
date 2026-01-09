@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 export default defineConfig({
-  build: {
-    outDir: 'dist',
-  },
+  base: './', // Crucial para GitHub Pages em subpastas
+  build: { outDir: 'dist' }
 });
