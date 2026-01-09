@@ -1,0 +1,8 @@
+{
+  "name": "Morpheus System 10/10",
+  "description": "A financial management dashboard for tracking company revenues and expenses, with AI-powered analysis features. Allows importing transaction data from images and XML files.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "prompt": ""
+}

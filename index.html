@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morpheus System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7/dist/ionicons/ionicons.js"></script>
+    <style>
+      .print-only {
+          display: none;
+      }
+      @media print {
+          body * {
+              visibility: hidden;
+          }
+          .printable-area, .printable-area * {
+              visibility: visible;
+          }
+          .printable-area {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              padding: 0;
+              color: black !important;
+              font-size: 10pt;
+          }
+          .no-print-in-area, .no-print-in-area * {
+              display: none !important;
+          }
+          .print-only {
+              display: block !important;
+          }
+          .printable-area h1, .printable-area h2, .printable-area h3, .printable-area p, .printable-area span, .printable-area td, .printable-area th {
+              color: black !important;
+          }
+          .printable-area table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+          }
+          .printable-area th, .printable-area td {
+              border: 1px solid #999 !important;
+              padding: 4px 8px;
+              text-align: left;
+          }
+          .printable-area th {
+              background-color: #f0f0f0 !important;
+              font-weight: bold;
+          }
+          .printable-area code {
+              font-family: 'Courier New', Courier, monospace;
+              word-break: break-all;
+              white-space: pre-wrap;
+          }
+          .printable-area .border-gray-700 {
+            border-color: #999 !important;
+          }
+          .printable-area .bg-red-900\/30 {
+              background-color: transparent !important;
+          }
+           .printable-area .bg-gradient-to-br {
+             background-image: none !important;
+             background-color: #f0f0f0 !important;
+             border: 1px solid #ccc;
+           }
+           @page {
+             size: A4;
+             margin: 1.5cm;
+           }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.12.0",
+    "recharts": "https://esm.sh/recharts@^3.1.0",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "jszip": "https://esm.sh/jszip@^3.10.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
